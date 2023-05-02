@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: Montserrat;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product-image{
+    width: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product-image-two{
+    display: none;
+}
+
+.description-container{
+    width: 295px;
+    margin: auto;
+}
+
+.product-category{
+    color: hsl(228, 12%, 48%);
+    margin-top: 20px;
+}
+
+.product-title{
+    color:hsl(212, 21%, 14%);
+    font-family: Fraunces;
+    margin-top: 10px;
+}
+
+h1{
+    font-size: 28px;
+}
+
+.product-description{
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    margin-top: 15px;
+  
+}
+
+.discount-price{
+    color: hsl(158, 36%, 37%);
+    font-size: 25px;
+    font-family: Fraunces;
+    margin-top: 20px;
+    float: left;
+}
+
+.original-price{
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+    display: inline-block;
+    margin: 30px 0 0 30px;;
+}
+
+button{
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    width: 295px;
+    height: 40px;
+    margin: 20px 0 20px 0; 
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+button:active{
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+button > img, button > span{
+    vertical-align: middle;
+}
+
+button span{
+    margin-left: 5px;
+}
+
+@media only screen and (min-width: 575px) {
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2/1fr);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .product-image{
+        display: grid;
+        grid-column: 1/2;
+        display: none;
+    }
+
+    .description-container{
+        grid-column: 2/3;
+        background-color: #fff;
+        width: 255px;
+        padding: 15px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .product-image-two{
+        display: block;
+        height: 380px;
+        border-top-left-radius: 10px ;
+        border-bottom-left-radius: 10px;
+    }
+
+    button{
+        width: 225px;
+        margin: 25px 0 10px 0;
+    }
+
+    .product-category{
+        margin-top:0;
+    }
+
+
+  }
+
